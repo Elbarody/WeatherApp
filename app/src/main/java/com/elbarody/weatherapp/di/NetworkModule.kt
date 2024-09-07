@@ -1,11 +1,15 @@
 package com.elbarody.weatherapp.di
 
+import com.elbarody.data.remote.Constants
+import com.elbarody.data.remote.api.ForecastApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 
@@ -25,7 +29,7 @@ class NetworkModule {
             .build()
     }
 
-    /*@Provides
+    @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder().baseUrl(Constants.BASE_URL)
@@ -34,7 +38,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesApiService(retrofit: Retrofit): TwitterApi {
-        return retrofit.create(TwitterApi::class.java)
-    }*/
+    fun providesApiService(retrofit: Retrofit): ForecastApi {
+        return retrofit.create(ForecastApi::class.java)
+    }
 }

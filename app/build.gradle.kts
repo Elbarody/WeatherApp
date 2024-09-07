@@ -58,6 +58,7 @@ dependencies {
     implementation(project(":base"))
     implementation(project(":data"))
     implementation(project(":presentation"))
+    implementation(project(":domain"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

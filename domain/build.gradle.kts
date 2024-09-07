@@ -9,22 +9,17 @@ java {
 }
 
 dependencies {
-    implementation(project(":domain"))
 
-    // Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-
-    // Okhttp
-    implementation(libs.okhttp)
-    testImplementation(libs.junit)
 
     // hilt
     implementation(libs.hilt.core)
+
+    testImplementation(libs.junit)
 
     // testing
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.inline)
     testImplementation(libs.mockito.kotlin)
     testImplementation (libs.kotlinx.coroutines.test)
+
 }

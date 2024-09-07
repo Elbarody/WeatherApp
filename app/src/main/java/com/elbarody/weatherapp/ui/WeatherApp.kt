@@ -9,7 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.elbarody.base.theme.TwitterPostCounterTheme
-import com.elbarody.presentation.ForecastWithSearchScreen
+import com.elbarody.presentation.ui.ForecastWithSearchScreen
 import com.elbarody.weatherapp.ui.MainDestinations.FORECAST_SCREEN
 
 @OptIn(ExperimentalSharedTransitionApi::class)

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="typing_hint">search with location</string>
+    <string name="country_name">"Country Name : "</string>
+    <string name="city_name">"City Name : "</string>
+    <string name="current_temp">"Current Temp: "</string>
+    <string name="condition">"Condition : "</string>
+    <string name="max_temp">"Max Temp: "</string>
+    <string name="min_temp">"Min Temp: "</string>
+    <string name="sunrise">"Sunrise : "</string>
+    <string name="sunset">"Sunset : "</string>
+</resources>

@@ -29,6 +29,6 @@ The application follows the Model-View-ViewModel (MVVM) architecture pattern to 
 - **Views**: Android Compose UI.
 
 ## Screenshots
-| <img src="screenshots/1.jpg" width=200/> |_
+| <img src="screenshots/1.JPG" width=200/> |_
 
 

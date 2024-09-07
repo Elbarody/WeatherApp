@@ -18,28 +18,38 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.elbarody.base.utils.Dimens.threeLevelPadding
+import com.elbarody.domin.model.ForecastHourItem
 import com.elbarody.presentation.R
 
 @Composable
-fun WeatherItem() {
+fun WeatherItem(forecastHourItem: ForecastHourItem) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(top = 3.dp)
-            .shadow(1.dp, RoundedCornerShape(threeLevelPadding))
-            .clip(RoundedCornerShape(threeLevelPadding))
-    ){
-
-        Row (modifier = Modifier.fillMaxWidth(),verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween){
-            Text(text = "Time : " +"00:00")
-            Text(text = "Temperature :" +"27.9 C")
+            .shadow(1.dp, RoundedCornerShape(8.dp))
+            .clip(RoundedCornerShape(8.dp))
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(text = "Time : " + forecastHourItem.date)
+            Text(text = "Temperature : " + forecastHourItem.temp)
         }
 
-        Row (modifier = Modifier.fillMaxWidth(),verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween){
-            Text(text = stringResource(R.string.condition) +"Clear")
-            Image(modifier = Modifier.size(40.dp), painter = rememberAsyncImagePainter("https://cdn.weatherapi.com/weather/64x64/night/113.png"), contentDescription = null)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(text = stringResource(R.string.condition) + forecastHourItem.condition)
+            Image(
+                modifier = Modifier.size(40.dp),
+                painter = rememberAsyncImagePainter(forecastHourItem.icon),
+                contentDescription = null
+            )
         }
     }
 }

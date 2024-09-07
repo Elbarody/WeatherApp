@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.elbarody.base.theme.TwitterPostCounterTheme
+import com.elbarody.base.theme.WeatherAppTheme
 import com.elbarody.presentation.ui.ForecastWithSearchScreen
 import com.elbarody.weatherapp.ui.MainDestinations.FORECAST_SCREEN
 
@@ -18,7 +18,7 @@ fun WeatherApp(
     appNavController: NavHostController
 ) {
     SharedTransitionLayout {
-        TwitterPostCounterTheme {
+        WeatherAppTheme {
             NavHost(
                 modifier = Modifier.fillMaxSize(),
                 navController = appNavController,

@@ -34,11 +34,11 @@ val Typography = Typography(
     ),
     bodyMedium = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.regular)
+            Font(R.font.bold)
         ),
         fontWeight = FontWeight.Normal,
         color = Color.Black,
-        fontSize = 16.sp
+        fontSize = 18.sp
     ),
 
     bodySmall = TextStyle(
@@ -47,6 +47,6 @@ val Typography = Typography(
         ),
         fontWeight = FontWeight.Normal,
         color = Color.Black,
-        fontSize = 14.sp
+        fontSize = 16.sp
     ),
 )

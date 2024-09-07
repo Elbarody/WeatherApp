@@ -89,10 +89,15 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
 
+    debugImplementation("com.github.chuckerteam.chucker:library:4.0.0")
+    //releaseImplementation("com.github.chuckerteam.chucker:library-no-op:4.0.0")
+
     testImplementation(libs.junit)
 
 
     testImplementation(libs.junit)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
 }
